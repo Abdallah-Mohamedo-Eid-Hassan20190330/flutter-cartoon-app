@@ -1,4 +1,3 @@
-import 'package:cubit_training/data/models/info_model.dart';
 import 'package:cubit_training/data/models/results_model.dart';
 
 class Characters {
@@ -17,9 +16,7 @@ class Characters {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.results != null) {
-      data['results'] = this.results!.map((v) => v.toJson()).toList();
-    }
+    data['results'] = results.map((v) => v.toJson()).toList();
     return data;
   }
 

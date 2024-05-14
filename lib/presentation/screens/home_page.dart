@@ -6,6 +6,7 @@ import 'package:cubit_training/presentation/widgets/build_body_grid.dart';
 import 'package:cubit_training/presentation/widgets/search_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_offline/flutter_offline.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -19,7 +20,21 @@ class HomePage extends StatelessWidget {
         ],
         centerTitle: true,
       ),
-      body: buildBody(),
+      body: OfflineBuilder(
+          connectivityBuilder:
+              (context, ConnectivityResult connectivity, Widget child) {
+            final bool connected = connectivity != ConnectivityResult.none;
+            if (connected) {
+              return buildBody();
+            } else {
+              return Center(
+                child: Text("There Is No Internet"),
+              );
+            }
+          },
+          child: Center(
+            child: CircularProgressIndicator(),
+          )),
     );
   }
 }

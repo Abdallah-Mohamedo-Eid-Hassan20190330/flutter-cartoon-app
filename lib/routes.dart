@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:cubit_training/business/characters_cubit.dart';
 import 'package:cubit_training/constants/strings.dart';
 import 'package:cubit_training/data/repository/repo.dart';
@@ -11,5 +13,7 @@ Repo repo = Repo(CharacterWebServices());
 
 Map<String, WidgetBuilder> appRoutes = {
   homeRoute: (context) => HomePage(),
-  charactersRoute: (context) => CharactersSearchScreen(),
+  charactersRoute: (context) {
+    return CharactersSearchScreen();
+  },
 };

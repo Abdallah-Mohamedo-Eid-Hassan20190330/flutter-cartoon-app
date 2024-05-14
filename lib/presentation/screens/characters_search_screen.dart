@@ -1,4 +1,5 @@
 import 'package:cubit_training/constants/my_colors.dart';
+import 'package:cubit_training/data/models/results_model.dart';
 import 'package:cubit_training/presentation/widgets/action_buttons.dart';
 import 'package:cubit_training/presentation/widgets/build_body_grid.dart';
 import 'package:cubit_training/presentation/widgets/search_field.dart';
@@ -16,6 +17,7 @@ class CharactersSearchScreen extends StatelessWidget {
         ],
       ),
       body: buildBody(),
+      backgroundColor: MyColors.myGrey,
     );
   }
 }

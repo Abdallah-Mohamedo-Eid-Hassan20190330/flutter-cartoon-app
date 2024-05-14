@@ -1,5 +1,3 @@
-import 'package:cubit_training/data/models/characters_model.dart';
-
 abstract class CharactersStates {}
 
 class InitialState extends CharactersStates {}

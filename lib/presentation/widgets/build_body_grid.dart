@@ -40,10 +40,10 @@ Widget buildBody() {
                     children: cubit.isSearching
                         ? cubit.searchedCharacters!.results.map((val) {
                             print(cubit.isSearching);
-                            return ItemViewer(val);
+                            return ItemViewer(val, context);
                           }).toList()
                         : cubit.characters!.results.map((val) {
-                            return ItemViewer(val);
+                            return ItemViewer(val, context);
                           }).toList(),
                   ),
                 ],

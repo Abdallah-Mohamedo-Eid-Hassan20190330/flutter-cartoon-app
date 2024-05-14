@@ -1,6 +1,5 @@
 import 'package:cubit_training/business/characters_state.dart';
 import 'package:cubit_training/data/models/characters_model.dart';
-import 'package:cubit_training/data/models/results_model.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../data/repository/repo.dart';
